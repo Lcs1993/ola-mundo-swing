@@ -1,0 +1,32 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "1.8.0_271" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill]"
+			"$rowConstraints": "[][][][][]"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblMensagem"
+				"text": "Aqui vai aparecer a Mensagem"
+				"foreground": sfield java.awt.Color red
+				"font": new java.awt.Font( "Tahoma", 0, 20 )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 2,alignx center,growx 0"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCliqueAqui"
+				"text": "Clique Aqui"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCliqueAquiActionPerformed", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 3 3 1 2"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
